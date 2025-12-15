@@ -7,7 +7,7 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
@@ -57,7 +57,7 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/lemonslice"
+      "x": "https://x.com/LemonSliceAI"
     }
   }
 }
