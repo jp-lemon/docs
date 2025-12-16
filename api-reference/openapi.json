@@ -27,8 +27,11 @@
           "content": {
             "application/json": {
               "schema": {
-                  "$ref": "#/components/schemas/AgentInfo"
-                }
+                "$ref": "#/components/schemas/AgentInfo"
+              },
+              "example": {
+                "agent_id": "agent_abc123"
+              }
             }
           },
           "required": true
