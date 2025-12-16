@@ -1,15 +1,15 @@
 ---
-title: "LemonSlice API"
-description: "Welcome to LemonSlice's documentation"
+title: "Lemon Slice API"
+description: "Welcome to Lemon Slice's documentation"
 ---
 
 ## Getting Started
 
-Follow these steps to create your first LemonSlice agent session and integrate it into your application.
+Follow these steps to create your first Lemon Slice agent session and integrate it into your application.
 
 ### 1. Get your API key
 
-Log into your LemonSlice dashboard and copy your **Server API Key**.\
+Log into your Lemon Slice dashboard and copy your **Server API Key**.\
 All API requests must include this header:
 
 ```
@@ -18,7 +18,7 @@ X-API-Key: YOUR_API_KEY
 
 ### 2. Create a room
 
-Use the `POST /rooms` endpoint to create a Daily room configured with a LemonSlice agent. The agent will automatically join the room once it's startup is complete.
+Use the `POST /rooms` endpoint to create a Daily room configured with a Lemon Slice agent. The agent will automatically join the room once it's startup is complete.
 
 #### Example request
 
@@ -46,11 +46,11 @@ await callObject.join({
 });
 ```
 
-Once joined, the LemonSlice agent will connect and begin responding in the room.
+Once joined, the Lemon Slice agent will connect and begin responding in the room.
 
-### 4. Listen for LemonSlice events
+### 4. Listen for Lemon Slice events
 
-LemonSlice uses Daily’s `app-message` channel to push events about the agent, image updates, and errors.
+Lemon Slice uses Daily’s `app-message` channel to push events about the agent, image updates, and errors.
 
 #### Example event handler
 

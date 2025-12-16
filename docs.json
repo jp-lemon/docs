@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "LemonSlice",
+  "name": "Lemon Slice",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -43,7 +43,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:josh@lemonslice.com"
+        "href": "mailto:support@lemonslice.com"
       }
     ]
   },

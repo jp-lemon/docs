@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-description: "Connect to the LemonSlice API to connect to your agent via a Daily.co room on any webpage."
+description: "Connect to the Lemon Slice API to connect to your agent via a Daily.co room on any webpage."
 ---
 
 ## Authentication
@@ -16,15 +16,15 @@ curl -X POST https://lemonslice.com/api/rooms \
 
 ---
 
-## LemonSlice Daily  Events
+## Lemon Slice Daily Events
 
-Hook into the Daily event handler to get LemonSlice specific events
+Hook into the Daily event handler to get Lemon Slice specific events
 
 ### Event Types
 
 | Event Type                 | Description                                                                                                      |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **bot_ready**              | Fired when the LemonSlice agent has successfully joined the Daily room and is ready to send/receive audio/video. |
+| **bot_ready**              | Fired when the Lemon Slice agent has successfully joined the Daily room and is ready to send/receive audio/video. |
 | **image_created**          | A new agent look has been created for the agent—typically after an `/imagine` request has been made              |
 | **image_change_complete**  | The agent's look has finished updating and the new look is now active.                                           |
 | **image_change_error**     | The agent failed to update its look. Includes an `err_msg` field with further details.                           |

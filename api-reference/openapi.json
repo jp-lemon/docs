@@ -1,8 +1,8 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "LemonSlice",
-    "description": "An API that gives access to a LemonSlice agent via a Daily room.",
+    "title": "Lemon Slice",
+    "description": "An API that gives access to a Lemon Slice agent via a Daily room.",
     "license": {
       "name": "MIT",
       "identifier": "MIT"
@@ -23,10 +23,10 @@
     "/rooms": {
       "post": {
         "summary": "Create room",
-        "description": "Creates a Daily room configured with the given LemonSlice agent.",
+        "description": "Creates a Daily room configured with the given Lemon Slice agent.",
         "operationId": "createRoom",
         "requestBody": {
-          "description": "The LemonSlice agent to use in the room.",
+          "description": "The Lemon Slice agent to use in the room.",
           "content": {
             "application/json": {
               "schema": {
