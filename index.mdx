@@ -1,97 +1,76 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "LemonSLice API"
+description: "Welcome to LemonSlice's API documentation"
 ---
 
-## Setting up
+## Getting Started
 
-Get your documentation site up and running in minutes.
+Follow these steps to create your first LemonSlice agent session and integrate it into your application.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+### 1. Get your API key
 
-## Make it yours
+Log into your LemonSlice dashboard and copy your **Server API Key**.\
+All API requests must include this header:
 
-Design a docs site that looks great and empowers your users.
+```
+X-API-Key: YOUR_API_KEY
+```
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+### 2. Create a room
 
-## Create beautiful pages
+Use the `POST /rooms` endpoint to create a Daily room configured with a LemonSlice agent. The agent will automatically join the room once it's startup is complete.
 
-Everything you need to create world-class documentation.
+#### Example request
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+```bash
+curl -X POST https://api.lemonslice.com/rooms \
+  -H "X-API-Key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{ "agent_id": "YOUR_AGENT_ID" }'
+```
 
-## Need inspiration?
+### 3. Join the room from your frontend
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+Use Daily’s JavaScript SDK to join the room using the URL + token returned from the API.
+
+#### Example (JavaScript)
+
+```javascript
+import DailyIframe from "@daily-co/daily-js";
+
+const callObject = DailyIframe.createCallObject();
+
+await callObject.join({
+  url: room_url,
+  token: token
+});
+```
+
+Once joined, the LemonSlice agent will connect and begin responding in the room.
+
+### 4. Listen for LemonSlice events
+
+LemonSlice uses Daily’s `app-message` channel to push events about the agent, image updates, and errors.
+
+#### Example event handler
+
+```javascript
+useDailyEvent("app-message", (ev) => {
+  if (ev?.data?.type === "bot_ready") {
+    console.log("Agent is ready!");
+  }
+  if (ev?.data?.type === "daily_error") {
+    console.log("An error occurred. ", ev?.data?.err_msg);
+  }
+});
+```
+
+### You're ready to build
+
+With a room created, the agent connected, and event hooks wired up, you're ready to:
+
+- Build interactive video AI apps
+- Customize agent behavior
+- Trigger image changes and respond to events
+
+Explore the rest of the API docs for more capabilities.

@@ -32,17 +32,18 @@
           },
           {
             "group": "Endpoints",
-            "pages": [
-              "api-reference/endpoint/rooms"
-            ]
+            "openapi": {
+              "source": "api-reference/openapi.json"
+            }
           }
+          
         ]
       }
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png"
   },
   "navbar": {
     "links": [
