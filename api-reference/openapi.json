@@ -86,7 +86,8 @@
             "description": "Unexpected error",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/Error" }
+                "schema": { "$ref": "#/components/schemas/ServerError" }
+                "example": { "detail": "Internal server error" }
               }
             }
           }
@@ -134,7 +135,16 @@
         "properties": {
           "message": {
             "type": "string",
-            "examples": ["Agent not found."]
+            "examples": ["Agent not found"]
+          }
+        }
+      }
+      "ServerError": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "string",
+            "examples": ["Internal server error"]
           }
         }
       }
