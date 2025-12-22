@@ -67,3 +67,27 @@ useDailyEvent(
   }, [])
 );
 ```
+
+### Control Events
+
+Send events through Daily to control the Lemon Slice agent
+| Control Event                   | Description |
+|-----------------------------|-------------|
+| **`chat-msg`**              | Send a message to the agent for it to respond to. |
+| **`force-end`**              | Immediatly stop the realtime agent. The agent will leave the room and billing will stop. |
+
+```javscript
+sendAppMessage(
+  {
+    event: "chat-msg",
+    message: "Your message here",
+    name: "User",
+  },
+  "*",
+);
+
+sendAppMessage(
+  { event: "force-end" }
+  "*",
+);
+```
