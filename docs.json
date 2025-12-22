@@ -1,13 +1,21 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
+  "$schema": "https://mintlify.com/docs.json",
   "name": "Lemon Slice",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
+  "logo": {
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png",
+    "href": "https://lemonslice.com"
+  },
   "favicon": "/favicon.ico",
+  "navbar": {
+    "links": []
+  },
   "navigation": {
     "tabs": [
       {
@@ -17,6 +25,12 @@
             "group": "Getting started",
             "pages": [
               "index"
+            ]
+          },
+          {
+            "group": "No-code guide",
+            "pages": [
+              "no-code-guide/squarespace.mdx"
             ]
           }
         ]
@@ -34,14 +48,6 @@
         ]
       }
     ]
-  },
-  "logo": {
-    "light": "/logo/logo.png",
-    "dark": "/logo/logo.png",
-    "href": "https://lemonslice.com"
-  },
-  "navbar": {
-    "links": []
   },
   "footer": {
     "socials": {
