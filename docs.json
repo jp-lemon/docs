@@ -24,7 +24,8 @@
             "pages": [
               "squarespace",
               "shopify",
-              "wix"
+              "wix",
+              "nextjs"
             ]
           }
         ]
