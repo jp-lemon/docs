@@ -15,9 +15,7 @@
         "groups": [
           {
             "group": "Getting started",
-            "pages": [
-              "index"
-            ]
+            "pages": []
           },
           {
             "group": "Deploying Agents",
@@ -32,14 +30,11 @@
       },
       {
         "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction",
-              "api-reference/openapi.json POST /rooms"
-            ]
-          }
+        "pages": [
+          "index",
+          "api-reference/introduction",
+          "api-reference/introduction-copied-1",
+          "api-reference/openapi.json POST /rooms"
         ]
       }
     ]
