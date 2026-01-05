@@ -18,15 +18,6 @@
             "pages": [
               "index"
             ]
-          },
-          {
-            "group": "Deploying Agents",
-            "pages": [
-              "squarespace",
-              "shopify",
-              "wix",
-              "nextjs"
-            ]
           }
         ]
       },
