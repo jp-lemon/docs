@@ -37,6 +37,8 @@
             "group": "API documentation",
             "pages": [
               "api-reference/introduction",
+              "api-reference/authentication",
+              "api-reference/events",
               "api-reference/openapi.json POST /rooms"
             ]
           }
