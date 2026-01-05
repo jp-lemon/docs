@@ -12,14 +12,9 @@
     "tabs": [
       {
         "tab": "Overview",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
+        "pages": [
               "index"
             ]
-          }
-        ]
       },
       {
         "tab": "Agents Platform",
