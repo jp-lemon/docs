@@ -18,10 +18,13 @@
       },
       {
         "tab": "Agents Platform",
-        "pages": [
-              "agent-reference/widget"
-            ],
         "groups": [
+          {
+            "group": "Widget",
+            "pages": [
+              "agent-reference/widget/widget"
+            ]
+          },
           {
             "group": "Deploying agents",
             "pages": [
