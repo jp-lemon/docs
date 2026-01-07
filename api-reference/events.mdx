@@ -39,7 +39,7 @@ useDailyEvent(
       console.log("Latest agent transcription: ", ev?.data?.transcription);
     }
     if (ev?.data?.type === "image_change_requested") {
-      console.log("Request to edit agent has been recieved")
+      console.log("Request to edit agent has been received")
     }
     if (ev?.data?.type === "image_created") {
       console.log("New base image for Agent created")
@@ -67,7 +67,7 @@ Send events through Daily to control the Lemon Slice agent
 | Control Event | Description                                                                              |
 | :------------ | :--------------------------------------------------------------------------------------- |
 | `chat-msg`    | Send a message to the agent for it to respond to.                                        |
-| `force-end`   | Immediatly stop the realtime agent. The agent will leave the room and billing will stop. |
+| `force-end`   | Immediately stop the realtime agent. The agent will leave the room and billing will stop. |
 
 ```javascript
 sendAppMessage(
