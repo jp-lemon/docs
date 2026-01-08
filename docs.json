@@ -22,6 +22,7 @@
           {
             "group": "Deploying agents",
             "pages": [
+              "agent-reference/deploying/widget",
               "agent-reference/deploying/squarespace",
               "agent-reference/deploying/shopify",
               "agent-reference/deploying/wix",
