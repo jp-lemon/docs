@@ -20,7 +20,14 @@
         "tab": "Agents Platform",
         "groups": [
           {
-            "group": "Deploying agents",
+            "group": "Widget",
+            "pages": [
+              "agent-reference/widget/overview",
+              "agent-reference/widget/widget"
+            ]
+          },
+          {
+            "group": "Installation guides",
             "pages": [
               "agent-reference/deploying/squarespace",
               "agent-reference/deploying/shopify",
